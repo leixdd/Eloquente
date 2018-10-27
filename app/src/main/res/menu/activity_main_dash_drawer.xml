@@ -4,10 +4,32 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/menuNews"
+            android:icon="@drawable/ic_event_note_black_24dp"
+            android:title="News" />
+
+        <item
+            android:id="@+id/menuMenu"
+            android:icon="@drawable/ic_menu_black"
+            android:title="Menu" />
+
+        <item
+            android:id="@+id/menuPackages"
+            android:icon="@drawable/ic_room_service_black_24dp"
+            android:title="Packages" />
+
+        <item
+            android:id="@+id/menuReserve"
+            android:icon="@drawable/ic_assignment_turned_in_black_24dp"
+            android:title="Reservation" />
+
         <item
             android:id="@+id/menuLogout"
-            android:icon="@drawable/ic_menu_send"
+            android:icon="@drawable/ic_exit_to_app_black_24dp"
             android:title="Logout" />
+
     </group>
 
 

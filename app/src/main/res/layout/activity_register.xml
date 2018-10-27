@@ -31,33 +31,10 @@
             android:layout_marginRight="10dp"
             android:layout_marginBottom="15dp"/>
 
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Email Address"
-            android:fontFamily="@font/ralewaysemibold"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="25dp"
-            android:layout_marginLeft="25dp"
-            android:textColor="@android:color/black"
-            android:textSize="10sp"
-            />
-
-        <EditText
-            android:id="@+id/txtEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="25dp"
-            android:layout_marginLeft="25dp"
-            android:textColor="@android:color/black"
-            android:inputType="textEmailAddress"
-            android:textSize="12sp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Last Name"
+            android:text="Surname"
             android:fontFamily="@font/ralewaysemibold"
             android:layout_marginTop="5dp"
             android:layout_marginRight="25dp"
@@ -123,7 +100,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Phone: "
+            android:text="Contact"
             android:fontFamily="@font/ralewaysemibold"
             android:layout_marginTop="5dp"
             android:layout_marginRight="25dp"
@@ -141,6 +118,28 @@
             android:textColor="@android:color/black"
             android:hint = "Number starts with +63 + 10 digits mobile number"
             android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email Address"
+            android:fontFamily="@font/ralewaysemibold"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            />
+
+        <EditText
+            android:id="@+id/txtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            android:textColor="@android:color/black"
+            android:inputType="textEmailAddress"
+            android:textSize="12sp"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -188,9 +187,9 @@
         <Button
             android:id="@+id/btnRegister"
             android:layout_gravity="center_horizontal"
-            android:layout_width="150dp"
+            android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:layout_marginRight="50dp"
             android:layout_marginLeft="50dp"
             android:textSize="12sp"
@@ -202,21 +201,7 @@
             android:tint ="@android:color/white"
             android:textColor="@android:color/white" />
 
-        <Button
-            android:id="@+id/btnCancel"
-            android:layout_gravity="center_horizontal"
-            android:layout_width="150dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginLeft="50dp"
-            android:textSize="12sp"
-            android:text="Back to Login"
-            android:background="@color/colorPrimaryDark"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:tint ="@android:color/white"
-            android:textColor="@android:color/white" />
+
 
 
     </LinearLayout>
