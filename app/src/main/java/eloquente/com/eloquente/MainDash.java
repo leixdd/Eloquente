@@ -20,6 +20,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import eloquente.com.eloquente.Modules.EloMenu;
+import eloquente.com.eloquente.Modules.EloReservations;
 import eloquente.com.eloquente.Modules.EloServices;
 
 public class MainDash extends AppCompatActivity
@@ -40,15 +41,6 @@ public class MainDash extends AppCompatActivity
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -124,6 +116,8 @@ public class MainDash extends AppCompatActivity
             fragment = new EloMenu();
         }else if (id == R.id.menuPackages) {
             fragment = new EloServices();
+        } else if (id == R.id.menuReserve) {
+            fragment = new EloReservations();
         }
 
         if(fragment != null ) {

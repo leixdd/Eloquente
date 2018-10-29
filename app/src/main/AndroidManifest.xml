@@ -4,8 +4,6 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -15,7 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -31,8 +31,25 @@
             android:name=".MainDash"
             android:label="@string/title_activity_main_dash"
             android:theme="@style/AppTheme" />
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".EloWed"></activity>
+        <activity
+            android:name=".RegisterActivity"
+            android:noHistory="true" />
+        <activity
+            android:name=".Modules.EloWed"
+            android:noHistory="true" />
+        <activity
+            android:name=".Modules.EloRate"
+            android:noHistory="true" />
+        <activity
+            android:name=".Modules.EloReviews"
+            android:noHistory="true" />
+        <activity
+            android:name=".Modules.EloPayment"
+            android:noHistory="true" />
+        <activity
+            android:name=".Modules.FixedReservation"
+            android:noHistory="true" />
+        <activity android:name=".Modules.CustomPackage"></activity>
     </application>
 
 </manifest>

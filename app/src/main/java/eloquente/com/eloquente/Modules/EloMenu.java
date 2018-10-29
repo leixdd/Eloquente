@@ -1,7 +1,10 @@
 package eloquente.com.eloquente.Modules;
 
 import android.app.ProgressDialog;
+import android.graphics.Color;
+import android.nfc.Tag;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -12,7 +15,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,14 +43,17 @@ public class EloMenu extends Fragment {
     private ArrayList<String> listImages = new ArrayList<>();
     private ArrayList<String> listNames = new ArrayList<>();
     private ArrayList<String> listRatings = new ArrayList<>();
+    private ArrayList<String> listID = new ArrayList<>();
+    private ArrayList<String> listReviews = new ArrayList<>();
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
 
+    SwipeRefreshLayout mSwipeRefreshLayout;
     private List<Menus> DataSet = new ArrayList<>();
 
-    SwipeRefreshLayout mSwipeRefreshLayout;
+    private ArrayAdapter mAdapter;
 
     @Nullable
     @Override
@@ -70,6 +78,28 @@ public class EloMenu extends Fragment {
         getAllMenu();
 
         Spinner spinnerName = view.findViewById(R.id.spinner);
+
+        mAdapter = new ArrayAdapter<String>(view.getContext(), R.layout.support_simple_spinner_dropdown_item, R.array.Categories) {
+            @NonNull
+            @Override
+            public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+
+                TextView txt = (TextView) super.getView(position, convertView, parent);
+
+                txt.setTextColor(Color.parseColor("#FFFFFF"));
+                return txt;
+            }
+
+            @Override
+            public View getDropDownView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+                TextView txt = (TextView) super.getView(position, convertView, parent);
+
+                txt.setTextColor(Color.parseColor("#FFFFFF"));
+
+                return txt;
+            }
+        };
+
         spinnerName.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -90,9 +120,11 @@ public class EloMenu extends Fragment {
     public void getCatMenu(String cat){
         Log.d(TAG, "getting menu");
 
-         listImages = new ArrayList<>();
-         listNames = new ArrayList<>();
-         listRatings = new ArrayList<>();
+        listImages = new ArrayList<>();
+        listNames = new ArrayList<>();
+        listRatings = new ArrayList<>();
+        listID = new ArrayList<>();
+        listReviews = new ArrayList<>();
 
         final ProgressDialog progressDialog = new ProgressDialog(getContext());
         progressDialog.setTitle("Loading...");
@@ -113,9 +145,11 @@ public class EloMenu extends Fragment {
                     listImages.add(ApiClient.BASE_URL + "img/menu/" + m.getImage());
                     listNames.add(m.getName());
                     listRatings.add(m.getRatings());
+                    listID.add(m.getId());
+                    listReviews.add(m.getReviews());
                 }
 
-                adapter = new MenuRecycleAdapter(getContext(), listNames, listImages, listRatings);
+                adapter = new MenuRecycleAdapter(getContext(), listNames, listImages, listRatings, listID, listReviews);
                 recyclerView.setAdapter(adapter);
                 layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
                 recyclerView.setLayoutManager(layoutManager);
@@ -139,6 +173,9 @@ public class EloMenu extends Fragment {
          listImages = new ArrayList<>();
          listNames = new ArrayList<>();
          listRatings = new ArrayList<>();
+         listID = new ArrayList<>();
+         listReviews = new ArrayList<>();
+
 
         final ProgressDialog progressDialog = new ProgressDialog(getContext());
         progressDialog.setTitle("Loading...");
@@ -159,24 +196,25 @@ public class EloMenu extends Fragment {
                     listImages.add(ApiClient.BASE_URL + "img/menu/" + m.getImage());
                     listNames.add(m.getName());
                     listRatings.add(m.getRatings());
+                    listID.add(m.getId());
+                    listReviews.add(m.getReviews());
                 }
 
-                adapter = new MenuRecycleAdapter(getContext(), listNames, listImages, listRatings);
+                adapter = new MenuRecycleAdapter(getContext(), listNames, listImages, listRatings, listID, listReviews);
                 recyclerView.setAdapter(adapter);
                 layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
                 recyclerView.setLayoutManager(layoutManager);
-                progressDialog.dismiss();
+
             }
 
             @Override
             public void onFailure(Call<List<Menus>> call, Throwable t) {
-
-                progressDialog.dismiss();
             }
 
         });
 
         onItemsLoadComplete();
+        progressDialog.dismiss();
     }
 
     void onItemsLoadComplete() {

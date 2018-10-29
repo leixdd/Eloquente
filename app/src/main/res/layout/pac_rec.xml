@@ -11,6 +11,24 @@
         android:orientation="vertical">
 
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/packageID"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/packageInc"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/menuLimit"
+            android:visibility="gone"/>
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Package Sample"
@@ -28,6 +46,7 @@
             android:textColor="@android:color/black"
             android:padding="5dp"
             android:id="@+id/packagePrice"/>
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -39,11 +58,25 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="fill_parent"
-                    android:maxLines="400"
-                    android:lines="10"
                     android:id="@+id/packageOtherText"
+                    android:maxLines="400"
+                    android:lines="20"
                     android:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
             </LinearLayout>
         </ScrollView>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select This Package"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@android:color/white"
+            android:id="@+id/btnSelectPack"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="15dp"/>
     </LinearLayout>
 </RelativeLayout>

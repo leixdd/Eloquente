@@ -16,11 +16,16 @@
             android:layout_height="wrap_content"
             android:text="Category Sort"
             />
+        
         <Spinner
             android:id="@+id/spinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:entries="@array/Categories"/>
+            android:entries="@array/Categories"
+            android:layout_marginTop="5dp"
+            >
+        </Spinner>
+            
     </LinearLayout>
 
     <android.support.v4.widget.SwipeRefreshLayout

@@ -17,6 +17,13 @@
             android:padding="20dp"
             android:id="@+id/weddingLay">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/serviceA_id"
+                android:text="7"
+                android:visibility="gone"/>
+
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
@@ -27,7 +34,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/black"
+                android:background="@color/colorPrimaryDark"
                 android:fontFamily="@font/ralewayregular"
                 android:textColor="@android:color/white"
                 android:padding="8dp"
@@ -43,6 +50,13 @@
             android:id="@+id/BirthdayLay"
             android:layout_below="@+id/weddingLay">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/serviceB_id"
+                android:text="8"
+                android:visibility="gone"/>
+
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
@@ -52,7 +66,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/black"
+                android:background="@color/colorPrimaryDark"
                 android:fontFamily="@font/ralewayregular"
                 android:textColor="@android:color/white"
                 android:padding="8dp"
@@ -68,6 +82,13 @@
             android:id="@+id/debutLay"
             android:layout_below="@+id/BirthdayLay">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/serviceC_id"
+                android:text="9"
+                android:visibility="gone"/>
+
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
@@ -77,7 +98,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/black"
+                android:background="@color/colorPrimaryDark"
                 android:fontFamily="@font/ralewayregular"
                 android:textColor="@android:color/white"
                 android:padding="8dp"
@@ -93,6 +114,14 @@
             android:id="@+id/partyLay"
             android:layout_below="@+id/debutLay">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/serviceD_id"
+                android:text="10"
+                android:visibility="gone"/>
+
+
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
@@ -102,12 +131,46 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/black"
+                android:background="@color/colorPrimaryDark"
                 android:fontFamily="@font/ralewayregular"
                 android:textColor="@android:color/white"
                 android:padding="8dp"
                 android:textSize="18sp"
                 android:text="Party Package"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:id="@+id/CUSTOMLay"
+            android:layout_below="@+id/partyLay">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/serviceCUSTOM_id"
+                android:text="10"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:src="@drawable/bg"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:fontFamily="@font/ralewayregular"
+                android:textColor="@android:color/white"
+                android:padding="8dp"
+                android:textSize="18sp"
+                android:text="Custom Package"/>
+
         </LinearLayout>
 
 

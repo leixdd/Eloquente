@@ -7,6 +7,7 @@ import com.google.gson.annotations.SerializedName;
  */
 
 public class WebResponse {
+
     @SerializedName("success")
     private boolean success;
 

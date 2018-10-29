@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="eloquente.com.eloquente.Modules.EloReviews"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:background="@color/colorPrimaryDark">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:id="@+id/image"
+            android:src="@mipmap/ic_launcher"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bacon and Mushroom Soup"
+            android:layout_marginTop="13dp"
+            android:textSize="20sp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/ralewaysemibold"
+            android:id="@+id/menuName"/>
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:isIndicator="true"
+            />
+
+        <Button
+            android:id="@+id/btnMakeReview"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="50dp"
+            android:textSize="12sp"
+            android:text="Make a Review"
+            android:background="@color/colorPrimary"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:tint ="@android:color/white"
+            android:textColor="@android:color/white" />
+
+
+    </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recycleView"
+            android:scrollbars="vertical"
+            android:orientation="vertical"/>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+</LinearLayout>

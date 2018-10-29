@@ -6,13 +6,15 @@ import com.google.gson.annotations.SerializedName;
  * Created by ARIELLECIAS on 10/27/2018.
  */
 
-public class Menus {
+public class Reviews {
+
+
 
     @SerializedName("id")
     private String id;
 
-    @SerializedName("image")
-    private String image;
+    @SerializedName("comments")
+    private String comments;
 
     @SerializedName("name")
     private String name;
@@ -20,19 +22,8 @@ public class Menus {
     @SerializedName("ratings")
     private String ratings;
 
-    @SerializedName("category")
-    private String category;
-
-    @SerializedName("reviews")
-    private String reviews;
-
-    public String getReviews() {
-        return reviews;
-    }
-
-    public void setReviews(String reviews) {
-        this.reviews = reviews;
-    }
+    @SerializedName("date")
+    private String date;
 
     public String getId() {
         return id;
@@ -42,12 +33,12 @@ public class Menus {
         this.id = id;
     }
 
-    public String getImage() {
-        return image;
+    public String getComments() {
+        return comments;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setComments(String comments) {
+        this.comments = comments;
     }
 
     public String getName() {
@@ -66,11 +57,11 @@ public class Menus {
         this.ratings = ratings;
     }
 
-    public String getCategory() {
-        return category;
+    public String getDate() {
+        return date;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
+    public void setDate(String date) {
+        this.date = date;
     }
 }

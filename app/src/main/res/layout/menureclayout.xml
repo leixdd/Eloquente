@@ -4,39 +4,72 @@
     android:padding="15dp"
     android:id="@+id/mainRel">
 
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:id="@+id/image"
-            android:src="@mipmap/ic_launcher"
-            android:layout_gravity="center_horizontal"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Bacon and Mushroom Soup"
-            android:layout_marginTop="13dp"
-            android:textSize="20sp"
-            android:layout_gravity="center_horizontal"
-            android:id="@+id/menuName"/>
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:background="@color/colorPrimaryDark">
 
-        <RatingBar
-            android:id="@+id/ratingBar"
-            android:scaleX="0.7"
-            android:scaleY="0.7"
-            android:layout_width="wrap_content"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/menuID"
+                android:visibility="gone"
+                android:textSize="20sp"
+                android:text="1"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:id="@+id/image"
+                android:src="@mipmap/ic_launcher"
+                android:layout_gravity="center_horizontal"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bacon and Mushroom Soup"
+                android:layout_marginTop="13dp"
+                android:textSize="20sp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/ralewaysemibold"
+                android:id="@+id/menuName"/>
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:isIndicator="true"
-            />
-
+            >
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 Reviews"
+                android:textSize="13sp"
+                android:id="@+id/reviews"/>
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:scaleX="0.5"
+                android:scaleY="0.5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:isIndicator="true"
+                />
+        </LinearLayout>
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -44,7 +77,6 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="15dp"/>
-
     </LinearLayout>
 
 

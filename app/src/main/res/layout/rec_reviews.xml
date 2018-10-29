@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:id="@+id/mainRel"
+    android:padding="15dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ralewaysemibold"
+        android:text="Ariel Lecias"
+        android:textSize="22sp"
+        android:id="@+id/reviewName"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ralewaylightitalic"
+        android:layout_below="@+id/reviewName"
+        android:text="27th October 2018 - 12:00 AM"
+        android:textSize="12sp"
+        android:id="@+id/reviewDate"
+        />
+
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reviewDate"
+        android:layout_marginStart="-64dp"
+        android:layout_marginTop="-10dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ralewaysemibold"
+        android:layout_below="@+id/ratingBar"
+        android:text="Reviewer's Comment"
+        android:textSize="12sp"
+        android:id="@+id/reviewtext"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ralewaylightitalic"
+        android:layout_below="@+id/reviewtext"
+        android:maxLines="400"
+        android:lines="2"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        android:textSize="15sp"
+        android:id="@+id/reviewComment"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        android:layout_below="@+id/reviewComment"/>
+</RelativeLayout>
